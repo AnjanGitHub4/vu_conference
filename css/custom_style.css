@@ -60,12 +60,21 @@ nav li a:hover {
 }
 
 @media (max-width: 468px){
+    html {
+        font-size: 75%;
+    }
+    .header-top_title {
+        margin-top: .5rem;
+    }
     .header-top_title h3 {
-        font-size: .9rem;
+        font-size: .7rem;
+        font-weight: 300;
     }
     .header-top_title h3 > span {
-        font-size: .9rem;
+        font-size: .85rem;
         margin-top: .25em;
+        font-weight: 500;
+        line-height: 1rem;
     }
     nav {
         align-items: start;
