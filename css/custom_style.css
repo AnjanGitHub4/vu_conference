@@ -36,7 +36,6 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
 }
 nav ul {
     list-style: none;
@@ -45,7 +44,6 @@ nav ul {
 }
 nav ul li {
     display: inline-block;
-    margin-left: 1rem;
 }
 
 nav li a {
@@ -59,4 +57,35 @@ nav li a {
 nav li a:hover {
     background-color: #2320b6;
     color: #c1ebe0cc !important;
+}
+
+@media (max-width: 468px){
+    .header-top_title h3 {
+        font-size: .9rem;
+    }
+    .header-top_title h3 > span {
+        font-size: .9rem;
+        margin-top: .25em;
+    }
+    nav {
+        align-items: start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-bottom: .5rem;
+    }
+    nav ul {
+        white-space: wrap;
+        padding-left: 0;
+    }
+    nav ul li:first-child{
+        margin-top: 0;
+    }
+    nav ul li {
+        text-align: center;
+        display: block;
+        margin-top: .25em;
+    }
+    nav li a {
+        font-size: .9rem;
+    }
 }
