@@ -6,12 +6,66 @@
     -webkit-box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
 }
+:root {
+    --text-slate-dark: #030f18;
+    --slate-dark: #011229;
+    --body-bg-color: #f7f4f4;
+    --btn-hover-color: #2320b6;
+    --primary-color: #2320b6;
+    --list-color: #c1ebe0cc;
+    --text-light-white: #f7f8fc;
+    --secondary-color: #fef08a;
+    --heading-color: #11e75f;
+    --info-color: #d0e112;
+    --list-icon-color: #c5d6ff;
+    --grey-text: #e5e4f1;
+    --header-bg-color: #ebefff;
+    --light-grey: #ccc;
+    --white-color: #ffffff;
+    --bx-shadow: 0 0 2px rgba(0,0,0,0.5);
+    --gradient-color-primary: linear-gradient(-45deg, #fbc2eb 0%, #a6c1ee 100%);
+    --gradient-color-secondary: linear-gradient(-225deg, #6b79b1 50%, #a463b4 100%);
+}
 body {
     scroll-behavior: smooth;
+    background-color: var(--body-bg-color);
+
 }
-/* ********************* main section style starts ************************** */
+/* helper style */
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.primary-btn {
+    display: inline-block;
+    color: var(--grey-text);
+    background-color: var(--primary-color);
+    padding: .58rem 1rem;
+    border-radius: 5px;
+    box-shadow: var(--bx-shadow);
+}
+.primary-btn:hover {
+    color: var(--light-grey);
+}
+
+
+/* ********************* header-top style starts ************************** */
+.header-top {
+    clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 78%, 96% 100%, 7% 100%, 0 79%, 0% 43%, 0 0);
+    background: var(--header-bg-color);
+}
+.header-top img {
+    min-height: 120px;
+    object-fit: cover;
+}
 .header-top_title h1 {
-    margin-top: .5rem;
+    -webkit-text-stroke: 1px #7f58f6;
+    color: transparent;
+    font-weight: 700;
+    /* margin-top: .5rem; */
+    color: var(--text-slate-dark);
 }
 .header-top_title {
     margin-left: .5rem;
@@ -20,24 +74,20 @@ body {
 .header-top_title h3 {
     font-size: 1.2rem;
     font-weight: 500;
+    color: var(--text-slate-dark);
 }
 .header-top_title h3 > span {
     margin-top: .5em;
     font-size: 1.6rem;
     font-weight: 600;
 } 
-.header-top-logo img {
-    min-width: 50%;
-    min-height: 50%;
-    object-fit: cover;
-    filter: drop-shadow(0 0 .25em #ccc);
-}
-.header-bottom {
-    background-color: #030f18;
-}
-/* ********************* main section style starts ************************** */
 
-/* ********************* main section style starts ************************** */
+.header-bottom {
+    background-color: var(--slate-dark);
+}
+/* ********************* header-top & header-bottom styles end ************************** */
+
+/* ********************* header navigation style starts ************************** */
 nav {
     width: 100%;
     display: flex;
@@ -48,6 +98,7 @@ nav ul {
     list-style: none;
     white-space: nowrap;
     margin-bottom: 0;
+    padding-left: 0;
 }
 nav ul li {
     display: inline-block;
@@ -55,36 +106,68 @@ nav ul li {
 
 nav li a {
     border-radius: 5px;
-    color: #ccc !important;
+    color: var(--light-grey) !important;
     text-transform: capitalize;
     transition: all .2s linear;
 }
 .active {
-    background-color: #2320b6;
+    background-color: var(--primary-color);
 }
 nav li a:hover {
-    background-color: #2320b6;
-    color: #c1ebe0cc !important;
+    background-color: var(--primary-color);
+    color: var(--list-color) !important;
 }
-/* ********************* main section style starts ************************** */
+/* *********************  header navigation styles end ************************** */
 
 
-/* ********************* mobile media query start ************************** */
+/* ********************* media query start ************************** */
+@media screen and (max-width: 768px) and (min-width:468px) {
+    .header-top {
+        padding: .5rem 0;
+    }
+
+    .header-top img {
+        height: 118px;
+        min-height: 70px;
+    }
+    .header-top_title h1 {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+    .header-top_title h3 {
+        font-size: 1rem;
+    }
+    .header-top_title h3>span {
+        font-size: 1rem;
+    }
+    
+}
+
 @media (max-width: 468px){
-    /* html {
-        font-size: 75%;
-    } */
+    html {
+        font-size: 80%;
+    }
+    .header-top {
+        padding: .25rem 0;
+    }
+    .header-top img {
+        height: 100px;
+        min-height: 80px;
+    }
+    .header-top_title h1 {
+        margin-bottom: 0;
+    }
     .header-top_title {
         margin-top: .5rem;
     }
     .header-top_title h3 {
-        font-size: .75rem;
-        font-weight: 300;
+        font-size: .9rem;
+        font-weight: 400;
     }
     .header-top_title h3 > span {
         font-size: .85rem;
         margin-top: .25em;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 1rem;
     }
     nav {
@@ -102,7 +185,6 @@ nav li a:hover {
     }
     nav ul li {
         text-align: center;
-        display: block;
         margin-top: .25em;
     }
     nav li a {
@@ -112,19 +194,30 @@ nav li a:hover {
         border-radius: 0;
     }
     main section {
+        background-image:var(--gradient-color-secondary),url('../images/bg.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+
     }
     .section-text {
         line-height: 1.5rem;
     }
+    section ul {
+        padding-left: .5rem;
+    }
+    section ul li {
+        color: var(--text-light-white);
+    }
 } 
-/* ********************* mobile media query ends ************************** */
+
+/* ********************* media query ends ************************** */
 
 
 /* ********************* main section style starts ************************** */
 main section {
-    background: #070012e1;
+    background-color: #6674cc;    
     height: auto;
     margin-bottom: .25em;
     padding: 1rem .5rem;
@@ -132,33 +225,37 @@ main section {
 section .section-heading {
     padding: .5rem 0;
     text-align: center;
-    color: #11e75f;
+    color: var(--heading-color);
     font-size: 2.3rem;
 }
 section:last-child{
     margin: 0;
 }
 section h2,h3 {
-    color: #ccc;
+    color: var(--secondary-color);
+    /* color: #f4ecec; */
     margin: 0;
 }
 section p {
-    color: #ccccccb7;
+    /* color: #fff; */
     line-height: 1.5em;
 }
 #home .container {
     min-height: inherit;
 }
 .organizer-details {
-   color: #ccc;
+   /* color: #fff; */
+   color: var(--secondary-color);
 }
 .organizer-details p {
-    color: #cccccca8;
+    /* color: #cccccca8; */
+    color: var(--grey-text);
 }
 
 .section-text {
     text-align: justify;
-    color: #ccccccb7;
+    /* color: #ccccccb7; */
+    color: var(--text-light-white);
     margin-top: .25rem;
 }
 section ul {
@@ -167,18 +264,68 @@ section ul {
 section ul li {
     display: inline-block;
     width: 90%;
-    color: #bbcfc8;
-    border-bottom: 1px dotted #2320b6;
+    color: var(--text-light-white);
+    border-bottom: 1px dotted var(--primary-color);
     margin-top: .5rem;
 }
 section ul li::before{
     content: ">> ";
-    color: #11e75f;
+    color: var(--list-icon-color);
+    font-weight: 600;
 }
 .section-text > .highlight-text {
-    background-color: #2320b6;
-    color: #ccc;
+    background-color: var(--primary-color);
     padding: .25rem;
     border-radius: 4px;
 }
-/* ********************* main section style ends ************************** */
+.section-text > strong {
+    color: var(--info-color);
+    font-weight: 600;
+}
+.schedule-reg > p{
+    margin: 0;
+    color: var(--grey-text);
+    margin-top: .25rem;
+}
+/* **********
+*********** main section style ends ************************** */
+
+/* footer style starts */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background-color: var(--slate-dark);
+    padding: 2.5rem 0;
+    padding-bottom: 0;
+}
+.footer-links h5,h6 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+.footer-links h6 {
+    font-size: 1.2rem;
+}
+.footer-links ul {
+    padding-left: .25rem;
+}
+.footer-links ul > li {
+    border-bottom: 1px dashed var(--primary-color);
+}
+
+.footer-links li > a{
+ color: var(--light-grey);
+}
+.footer-links li > a::before {
+    content: ">> ";
+    color: var(--light-grey);
+}
+.footer-links .footer-thanks {
+    padding: 1rem 0;
+    padding-bottom: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--slate-dark);
+    -webkit-text-stroke: 1px var(--heading-color);
+}
