@@ -10,6 +10,7 @@
     --text-slate-dark: #030f18;
     --slate-dark: #011229;
     --body-bg-color: #f7f4f4;
+    --bg-section: #552bc1;
     --btn-hover-color: #2320b6;
     --primary-color: #2320b6;
     --list-color: #c1ebe0cc;
@@ -29,7 +30,22 @@
 body {
     scroll-behavior: smooth;
     background-color: var(--body-bg-color);
-
+}
+/* customize style */
+.modal {
+    backdrop-filter: blur(5px);
+}
+.modal-body {
+    text-align: center;
+    overflow: hidden;
+}
+.modal-body > img {
+    width: 50%;
+    object-fit: cover;
+    transition: all .2s ease;
+}
+.modal-body > img:hover {
+    transform: scale(1.1);
 }
 /* helper style */
 ul {
@@ -217,7 +233,7 @@ nav li a:hover {
 
 /* ********************* main section style starts ************************** */
 main section {
-    background-color: #6674cc;    
+    background-color: var(--bg-section);    
     height: auto;
     margin-bottom: .25em;
     padding: 1rem .5rem;
@@ -251,7 +267,31 @@ section p {
     /* color: #cccccca8; */
     color: var(--grey-text);
 }
-
+/* payment-contents */
+.payment-contents li > strong {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+.upi-qr-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: .25rem 0;
+    height: auto;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+.upi-qr-wrapper > img {
+    width: 55%;
+    object-fit: cover;
+    filter: blur(2px);
+    transition: all .2s linear;
+    cursor: pointer;
+}
+/* .upi-qr-wrapper img:hover {
+    transform: scale(1.2);
+} */
 .section-text {
     text-align: justify;
     /* color: #ccccccb7; */
