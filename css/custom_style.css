@@ -9,12 +9,13 @@
 :root {
     --text-slate-dark: #030f18;
     --slate-dark: #011229;
-    --body-bg-color: #f7f4f4;
-    --bg-section: #552bc1;
+    --body-bg-color: #ffffffdb;
+    /* --bg-section: #552bc1; */
+    --bg-section: #391b69;
     --btn-hover-color: #2320b6;
     --primary-color: #2320b6;
     --list-color: #c1ebe0cc;
-    --text-light-white: #f7f8fc;
+    --text-light-white: #c5cce8;
     --secondary-color: #fef08a;
     --heading-color: #11e75f;
     --info-color: #d0e112;
@@ -27,11 +28,41 @@
     --gradient-color-primary: linear-gradient(-45deg, #fbc2eb 0%, #a6c1ee 100%);
     --gradient-color-secondary: linear-gradient(-225deg, #6b79b1 50%, #a463b4 100%);
 }
+
 body {
     scroll-behavior: smooth;
     background-color: var(--body-bg-color);
 }
-/* customize style */
+/* pre-loader style */
+.preloader {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 1000vh;
+    background: var(--slate-dark);
+    z-index: 999;
+}
+.preloader .loader-icon {
+    width: 100%;
+    height: 100vh;
+    background: var(--slate-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(128deg,#4e49b2,#4506db,#7f1914,#6043d4,#d2fc30);
+    background-size: 300% 300%;
+    animation: gradient-animation 40s ease infinite; */
+}
+.loader-welcome {
+    width: 30%;
+}
+.loader-progress {
+    width: 10%;
+    margin-top: .58rem;
+}
+/* customize bootstrap style */
 .modal {
     backdrop-filter: blur(5px);
 }
@@ -52,18 +83,54 @@ body {
 .modal-body > img:hover {
     transform: scale(1.1);
 }
+
+/* incons style */
+.fa-arrow-down {
+    color: #e84f13 !important;
+    pointer-events: none;
+}
+/* icon animations */
+.zoom {
+    color: #11e75f;
+    scale: 1;
+    transition: all .2s linear;
+    animation: zoom-in-out 1s ease infinite;
+}
+
+@keyframes zoom-in-out {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.2;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+
 /* helper style */
+header {
+    z-index: -1;
+
+}
+main {
+    z-index: -1
+}
+
 ul {
     list-style: none;
 }
 a {
     text-decoration: none;
 }
+
 .primary-btn {
     display: inline-block;
     color: var(--grey-text);
     background-color: var(--primary-color);
-    padding: .58rem 1rem;
+    padding: .5rem 1rem;
     border-radius: 5px;
     box-shadow: var(--bx-shadow);
 }
@@ -74,28 +141,33 @@ a {
 
 /* ********************* header-top style starts ************************** */
 .header-top {
+    padding: .5rem;
     clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 78%, 96% 100%, 7% 100%, 0 79%, 0% 43%, 0 0);
     background: var(--header-bg-color);
 }
-.header-top img {
-    min-height: 120px;
+figure {
+    text-align: center;
+    margin-bottom: 0;
+}
+.header-top  img {
+    width: 68%;
     object-fit: cover;
 }
 .header-top_title h1 {
     -webkit-text-stroke: 1px #7f58f6;
     color: transparent;
     font-weight: 700;
-    /* margin-top: .5rem; */
     color: var(--text-slate-dark);
 }
-.header-top_title {
-    margin-left: .5rem;
-}
 
-.header-top_title h3 {
+.header-top .header-top_title > h3 {
+    text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--text-slate-dark);
+}
+.header-top_title > h3 span#center-text {
+    text-align: center !important;
 }
 .header-top_title h3 > span {
     margin-top: .5em;
@@ -105,26 +177,21 @@ a {
 
 .header-bottom {
     background-color: var(--slate-dark);
-}
-/* ********************* header-top & header-bottom styles end ************************** */
+} /* ********************* header-top & header-bottom styles end ************************** */
 
 /* ********************* header navigation style starts ************************** */
-nav {
+nav .navbar{
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    padding: 0;
 }
 nav ul {
     list-style: none;
-    white-space: nowrap;
     margin-bottom: 0;
     padding-left: 0;
 }
 nav ul li {
-    display: inline-block;
+    margin-left: .5rem;
 }
-
 nav li a {
     border-radius: 5px;
     color: var(--light-grey) !important;
@@ -134,10 +201,7 @@ nav li a {
 .active {
     background-color: var(--primary-color);
 }
-nav li a:hover {
-    background-color: var(--primary-color);
-    color: var(--list-color) !important;
-}
+
 /* *********************  header navigation styles end ************************** */
 
 
@@ -148,8 +212,7 @@ nav li a:hover {
     }
 
     .header-top img {
-        height: 118px;
-        min-height: 70px;
+        height: 25%;
     }
     .header-top_title h1 {
         margin-bottom: 0;
@@ -163,23 +226,22 @@ nav li a:hover {
     }
     
 }
-
 @media (max-width: 468px){
     html {
         font-size: 80%;
     }
     .header-top {
         padding: .25rem 0;
-    }
-    .header-top img {
-        height: 100px;
-        min-height: 80px;
-    }
+    } 
     .header-top_title h1 {
         margin-bottom: 0;
     }
+    .header-top_title{
+        width: 100%;
+    }
     .header-top_title {
         margin-top: .5rem;
+
     }
     .header-top_title h3 {
         font-size: .9rem;
@@ -198,7 +260,6 @@ nav li a:hover {
         padding-bottom: .5rem;
     }
     nav ul {
-        white-space: wrap;
         padding-left: 0;
     }
     nav ul li:first-child{
@@ -211,6 +272,7 @@ nav li a:hover {
     nav li a {
         font-size: .9rem;
     }
+    /* main-style */
     main section:first-child{
         border-radius: 0;
     }
@@ -231,16 +293,38 @@ nav li a:hover {
     section ul li {
         color: var(--text-light-white);
     }
-} /* ********************* media query ends ************************** */
+} 
+/* ********************* media query ends ************************** */
 
 
 /* ********************* main section style starts ************************** */
+.gradient-background {
+    background: linear-gradient(128deg,#4e49b2,#4506db,#7f1914,#6043d4,#d2fc30);
+    background-size: 300% 300%;
+    animation: gradient-animation 40s ease infinite;
+  }
+  
 main section {
     background-color: var(--bg-section);    
+    /* background-image: url('https://assets-global.website-files.com/614716f50b4f49202fdd0087/616949393cf90643c1403605_6423-p-500.png'); */
+    /* background: url('https://pixabay.com/videos/ink-water-underwater-foam-smoke-67358/');
+    background-repeat: no-repeat;
+    background-size: cover; */
     height: auto;
     margin-bottom: .25em;
     padding: 1rem .5rem;
 }
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 section .section-heading {
     padding: .5rem 0;
     text-align: center;
@@ -252,30 +336,30 @@ section:last-child{
 }
 section h2,h3 {
     color: var(--secondary-color);
-    /* color: #f4ecec; */
     margin: 0;
 }
 section p {
-    /* color: #fff; */
     line-height: 1.5em;
 }
+
 #home .container {
     min-height: inherit;
 }
-.organizer-details {
-   /* color: #fff; */
+.organiser-details {
    color: var(--secondary-color);
 }
-.organizer-details p {
-    /* color: #cccccca8; */
+.organiser-details p {
     color: var(--grey-text);
 }
-/* payment-contents */
+
+/* payment-contents styles*/
 .payment-contents li > strong {
     font-weight: 500;
     color: var(--secondary-color);
 }
+
 .upi-qr-wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -285,7 +369,24 @@ section p {
     box-sizing: content-box;
     overflow: hidden;
 }
+.upi-qr-wrapper > .payment-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    transform: translate(-50%,-50%);
+    z-index: 455;
+}
+.payment-info > p{
+    color: var(--light-grey);
+    padding: .25rem 1rem;
+    background-color: var(--slate-dark) !important;
+    border-radius: 5px;
+    font-weight: 500;
+}
 .upi-qr-wrapper > img {
+    position: relative;
     width: 55%;
     object-fit: cover;
     filter: blur(2px);
@@ -311,13 +412,13 @@ section ul li {
     border-bottom: 1px dotted var(--primary-color);
     margin-top: .5rem;
 }
-section ul li::before{
+section ul li>p::before{
     content: ">> ";
     color: var(--list-icon-color);
     font-weight: 600;
 }
 .section-text > .highlight-text {
-    background-color: var(--primary-color);
+    background-color: var(--highlight-color);
     padding: .25rem;
     border-radius: 4px;
 }
@@ -372,3 +473,4 @@ footer {
     color: var(--slate-dark);
     -webkit-text-stroke: 1px var(--heading-color);
 }
+
