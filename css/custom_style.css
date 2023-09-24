@@ -42,6 +42,7 @@ body {
     height: 1000vh;
     background: var(--slate-dark);
     z-index: 999;
+    display: none;
 }
 .preloader .loader-icon {
     width: 100%;
@@ -145,12 +146,10 @@ a {
     clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 78%, 96% 100%, 7% 100%, 0 79%, 0% 43%, 0 0);
     background: var(--header-bg-color);
 }
-figure {
-    text-align: center;
-    margin-bottom: 0;
-}
-.header-top  img {
-    width: 68%;
+
+.header-top a >  img {
+    max-height: 175px;
+    min-height: 110px;
     object-fit: cover;
 }
 .header-top_title h1 {
@@ -207,10 +206,15 @@ nav li a {
 
 /* ********************* media query start ************************** */
 @media screen and (max-width: 768px) and (min-width:468px) {
+    .loader-welcome {
+        width: 60%;
+    }
+    .loader-progress {
+        width: 20%;
+    }
     .header-top {
         padding: .5rem 0;
     }
-
     .header-top img {
         height: 25%;
     }
@@ -230,28 +234,32 @@ nav li a {
     html {
         font-size: 80%;
     }
+    .loader-welcome {
+        width: 80%;
+    }
+    .loader-progress {
+        width: 25%;
+    }
+    .header-top .container {
+        flex-direction: column;
+        justify-content: center;
+    }
     .header-top {
         padding: .25rem 0;
     } 
+    .header-top a > img {
+        max-height: 120px;
+        min-height: 80px;
+    }
     .header-top_title h1 {
         margin-bottom: 0;
     }
     .header-top_title{
         width: 100%;
     }
-    .header-top_title {
-        margin-top: .5rem;
-
-    }
     .header-top_title h3 {
-        font-size: .9rem;
+        font-size: .5rem;
         font-weight: 400;
-    }
-    .header-top_title h3 > span {
-        font-size: .85rem;
-        margin-top: .25em;
-        font-weight: 600;
-        line-height: 1rem;
     }
     nav {
         align-items: start;
@@ -277,12 +285,11 @@ nav li a {
         border-radius: 0;
     }
     main section {
-        background-image:var(--gradient-color-secondary),url('../images/bg.svg');
+        background-image:var(--gradient-color-secondary);
         background-repeat: no-repeat;
         background-size: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
     .section-text {
         line-height: 1.5rem;
@@ -298,33 +305,13 @@ nav li a {
 
 
 /* ********************* main section style starts ************************** */
-.gradient-background {
-    background: linear-gradient(128deg,#4e49b2,#4506db,#7f1914,#6043d4,#d2fc30);
-    background-size: 300% 300%;
-    animation: gradient-animation 40s ease infinite;
-  }
-  
 main section {
     background-color: var(--bg-section);    
-    /* background-image: url('https://assets-global.website-files.com/614716f50b4f49202fdd0087/616949393cf90643c1403605_6423-p-500.png'); */
-    /* background: url('https://pixabay.com/videos/ink-water-underwater-foam-smoke-67358/');
-    background-repeat: no-repeat;
-    background-size: cover; */
     height: auto;
-    margin-bottom: .25em;
-    padding: 1rem .5rem;
+    /* margin-bottom: .25em; */
+    padding: 1rem 0 0 0;
+    border: 0;
 }
-@keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 section .section-heading {
     padding: .5rem 0;
     text-align: center;
@@ -340,10 +327,6 @@ section h2,h3 {
 }
 section p {
     line-height: 1.5em;
-}
-
-#home .container {
-    min-height: inherit;
 }
 .organiser-details {
    color: var(--secondary-color);

@@ -4,15 +4,14 @@ let preLoader = document.querySelector(".preloader");
 let temp = '';
 // preloader animation start-up
 const loader = () => {
-    console.log("loading....");
     document.body.style.overflow = "hidden";
     setTimeout(() => {
         preLoader.style.display="none";
     document.body.style.overflow = "auto";
-    }, 5000)
+    }, 3000)
 }
 window.addEventListener('DOMContentLoaded', () => {
-    loader();
+    // loader();
 });
 // set qr-code image to modal-body
 upiWrapper.addEventListener("click", (eArgs) => {
