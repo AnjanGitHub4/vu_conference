@@ -6,12 +6,12 @@ let temp = '';
 const loader = () => {
     document.body.style.overflow = "hidden";
     setTimeout(() => {
-        preLoader.style.display="none";
-    document.body.style.overflow = "auto";
+        preLoader.style.display = "none";
+        document.body.style.overflow = "auto";
     }, 3000)
 }
 window.addEventListener('DOMContentLoaded', () => {
-    // loader();
+    loader();
 });
 // set qr-code image to modal-body
 upiWrapper.addEventListener("click", (eArgs) => {
@@ -25,5 +25,26 @@ upiWrapper.addEventListener("click", (eArgs) => {
     }
 });
 
-
-
+window.addEventListener('scroll', (e) => {
+    let scrollY = Math.floor(window.scrollY);
+    if (scrollY >= 240 && scrollY < 425) {
+        document.querySelector("header").classList.add("sticky-header");
+    }
+    if (scrollY === 0) {
+        document.querySelector("header").classList.remove("sticky-header");
+    }
+    // display go-back-button after scrolling some ections 
+    if (scrollY >= 1550) {
+        document.querySelector(".back-home-icon").style.display = "block";
+    } else {
+        document.querySelector(".back-home-icon").style.display = "none";
+    }
+});
+// go back home/top of the page
+function goBackHome() {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    })
+}
