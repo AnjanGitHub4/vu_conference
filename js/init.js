@@ -2,6 +2,7 @@ let upiWrapper = document.querySelector(".upi-qr-wrapper img");
 let modalBody = document.querySelector(".modal-body");
 let preLoader = document.querySelector(".preloader");
 let temp = '';
+
 // preloader animation start-up
 const loader = () => {
     document.body.style.overflow = "hidden";
@@ -13,6 +14,7 @@ const loader = () => {
 window.addEventListener('DOMContentLoaded', () => {
     loader();
 });
+
 // set qr-code image to modal-body
 upiWrapper.addEventListener("click", (eArgs) => {
     temp += `<img src="./images/QR_Code.jpg" alt="payment-upi-qr-code">`;
@@ -40,11 +42,14 @@ window.addEventListener('scroll', (e) => {
         document.querySelector(".back-home-icon").style.display = "none";
     }
 });
+
 // go back home/top of the page
 function goBackHome() {
     window.scrollTo({
         top: 0,
         left: 0,
         behavior: "smooth",
-    })
+    });
 }
+
+

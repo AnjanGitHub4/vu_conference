@@ -18,7 +18,8 @@
     --primary-color: #2320b6;
     --primary-btn-color: #2294ed;
     --list-color: #c1ebe0cc;
-    --text-light-white: #b9cde4;
+    /* --text-light-white: #b9cde4; */
+    --text-light-white: #ec6e15;
     --secondary-color: #fef08a;
     --heading-color: #11e75f;
     --info-color: #d0e112;
@@ -51,6 +52,7 @@ body {
     height: 1000vh;
     background: var(--slate-dark);
     z-index: 9999;
+    /* display: none; */
 }
 .preloader .loader-icon {
     width: 100%;
@@ -71,6 +73,7 @@ body {
 /* customize bootstrap style */
 .modal {
     backdrop-filter: blur(5px);
+    z-index: 9999999;
 }
 .modal-content {
     height: 90vh;
@@ -161,6 +164,7 @@ header {
     padding: .5rem;
     background: url('../images/bg-icons.png'), var(--header-bg-color);
     background-size: 25%;
+    background-position: center;
     clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 78%, 96% 100%, 7% 100%, 0 79%, 0% 43%, 0 0);
     /* background: var(--header-bg-color); */
 }
@@ -249,6 +253,7 @@ main section {
 .section-home{
     background: url("../images/home_conference.jpg"),linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsla(274, 65%, 12%, 1) 100%);
     background-size: 100% 750px;
+    background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
@@ -266,6 +271,7 @@ section h2,h3 {
     margin: 0;
 }
 section p {
+    font-size: 1.1rem;
     line-height: 1.2em;
 }
 section ul {
@@ -283,14 +289,20 @@ section ul li>p::before{
     color: var(--list-icon-color);
     font-weight: 600;
 }
+
 .section-text > .highlight-text {
     background-color: var(--highlight-color);
     padding: .25rem;
     border-radius: 4px;
 }
+.uni-link {
+    color: var(--light-grey);
+}
 .section-text > strong {
     color: var(--info-color);
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: .5rem;
 }
 .section-text {
     text-align: justify;
@@ -538,6 +550,7 @@ footer {
     section ul li {
         color: var(--text-light-white);
     }
+
     .upi-qr-wrapper > img {
         width: 100%;
     }
