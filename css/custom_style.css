@@ -18,8 +18,8 @@
     --primary-color: #2320b6;
     --primary-btn-color: #2294ed;
     --list-color: #c1ebe0cc;
-    /* --text-light-white: #b9cde4; */
-    --text-light-white: #ec6e15;
+    --text-light-white: #b7bec6;
+    /* --text-light-white: #ec6e15; */
     --secondary-color: #fef08a;
     --heading-color: #11e75f;
     --info-color: #d0e112;
@@ -33,7 +33,7 @@
     --white-color: #ffffff;
     --bx-shadow: 0 0 2px rgba(0,0,0,0.5);
     --gradient-color-primary: linear-gradient(-45deg, #fbc2eb 0%, #a6c1ee 100%);
-    --gradient-color-secondary: linear-gradient(-225deg, #6b79b1 50%, #a463b4 100%);
+    --gradient-color-secondary: linear-gradient(-225deg, #1638c1 50%, #a463b4 100%);
 }
 body {
     scroll-behavior: smooth;
@@ -238,12 +238,17 @@ main section {
     /* background: url('../images/dark-bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed; */
-    /* margin-bottom: .25em; */
+    margin-bottom: .25em;
     background: hsla(350, 73%, 44%, 1);
     background: linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsla(274, 65%, 12%, 1) 100%);
     background: -moz-linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsla(274, 65%, 12%, 1) 100%);
     background: -webkit-linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsla(274, 65%, 12%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C11E38", endColorstr="#220B34", GradientType=1 );
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,15,50,1) 35%, rgba(70,40,60,1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,15,50,1) 35%, rgba(70,40,60,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,15,50,1) 35%, rgba(70,40,60,1) 100%); */
+    /* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C11E38", endColorstr="#220B34", GradientType=1 ); */
     height: auto;
     padding: 1rem 0 0 0;
     border: 0;
@@ -251,7 +256,7 @@ main section {
     overflow: hidden;
 }
 .section-home{
-    background: url("../images/home_conference.jpg"),linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsla(274, 65%, 12%, 1) 100%);
+    background: url("../images/home_conference.jpg"),linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,15,50,1) 35%, rgba(70,40,60,1) 100%);
     background-size: 100% 750px;
     background-position: center;
     background-attachment: fixed;
@@ -321,7 +326,7 @@ section ul li>p::before{
     left: 0%;
     width: 100%;
     min-height: 25vh;
-    background-color: rgba(6, 1, 11, 0.35);
+    background-color: rgba(6, 1, 11, 0.5);
     backdrop-filter: blur(2px);
     z-index: -1;
 }
@@ -550,7 +555,11 @@ footer {
     section ul li {
         color: var(--text-light-white);
     }
-
+    .organiser-details::before {
+        content: "";
+        background-color: none;
+        min-height: 30vh;
+    }
     .upi-qr-wrapper > img {
         width: 100%;
     }
@@ -562,6 +571,12 @@ footer {
     }
     .contact-us-img > img {
         width: 80%;
+    }
+    .footer-map{
+        margin-top: .7rem;
+    }
+    .map-wrapper iframe{
+        height: 250px;
     }
 }
 
