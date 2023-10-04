@@ -37,15 +37,15 @@
         <!-- pre-loader -->
         <div class="preloader">
             <div class="loader-icon">
-                <script defer src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-                    type="module"></script>
+                <!-- <script defer src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                    type="module"></script> -->
                 <div class="loader-welcome">
-                    <dotlottie-player src="https://lottie.host/c605828d-f6fd-4f4a-b59f-d3c7450fd682/eLmdm7pb4U.json"
-                        background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    <lottie-player src="./js/anim_wlc.json"
+                        background="transparent" speed="1" loop autoplay></lottie-player>
                 </div>
                 <div class="loader-progress">
-                    <dotlottie-player src="https://lottie.host/20c5b30b-13c3-487f-99d3-aa03b33f0cfc/tKe4uONJcd.json"
-                        background="transparent" speed="1" loop autoplay></dotlottie-player>
+                    <lottie-player src="https://lottie.host/20c5b30b-13c3-487f-99d3-aa03b33f0cfc/tKe4uONJcd.json"
+                        background="transparent" speed="1" loop autoplay></lottie-player>
                 </div>
             </div>
         </div>
@@ -189,7 +189,7 @@
                     <div class="row">
                         <h3>Conference Sub-theme</h3>
                         <div class="col-md-6 col-6 col-sm-6 col-lg-6">
-                            <ul>
+                            <ul class="theme-list">
                                 <li>Banking</li>
                                 <li>Mutual funds</li>
                                 <li>Digital money</li>
@@ -200,7 +200,7 @@
                             </ul>
                         </div>
                         <div class="col-md-6 col-6 col-sm-6 col-lg-6">
-                            <ul>
+                            <ul class="theme-list">
                                 <li>Insurence</li>
                                 <li>NBFCs</li>
                                 <li>Fintechs</li>
@@ -265,7 +265,7 @@
                     <div class="row mt-2">
                         <div class="col-md-6 col-lg-6">
                             <h3>Important deadlines:</h3>
-                            <ul>
+                            <ul class="list-item">
                                 <li>Submission of abstract: November 30,2023</li>
                                 <li>Intimation of acceptance of abstract: December 7, 2023</li>
                                 <li>Submission of full paper: December 20, 2023</li>
@@ -347,7 +347,7 @@
                         <div class="schedule-reg p-2">
                             <h3>Registration details:</h3>
                             <p class="para-text">Early bird registration - </p>
-                            <ul>
+                            <ul class="list-item">
                                 <li>Corporate delegates: Rs. 3000</li>
                                 <li>Academicians: Rs. 2000.</li>
                                 <li>Research scholars: Rs. 1500</li>
@@ -460,6 +460,10 @@
         </div>
     </footer> <!-- end footer content -->
 
+    <!-- lottie animation js cdn -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lottie-player/1.4.3/lottie-player.js"
+        integrity="sha512-gloNJjJNXOqLPOVxOJ/Sg9VN4jSPZpDdEQC+CDP0TczZ6OaOk0Ru1daFEOT/XAJY7fYABwFWVRXOx4HMFr6+lA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- bootstrap-5 js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

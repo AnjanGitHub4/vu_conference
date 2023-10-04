@@ -158,7 +158,9 @@ header {
 .para-text {
     color: var(--text-light-white);
 }
-
+.list-item {
+    font-size: 1.1rem;
+}
 /* ********************* header-top style starts ************************** */
 .header-top {
     padding: .5rem;
@@ -306,7 +308,7 @@ section ul li>p::before{
 .section-text > strong {
     color: var(--info-color);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: .95rem;
     margin-top: .5rem;
 }
 .section-text {
@@ -330,10 +332,14 @@ section ul li>p::before{
     backdrop-filter: blur(2px);
     z-index: -1;
 }
-/* payment-contents styles*/
+/* payment-contents styles */
+.payment-contents > li {
+    font-size: 1.1rem;
+}
 .payment-contents li > strong {
     font-weight: 500;
     color: var(--secondary-color);
+    font-size: 1rem;
 }
 
 .upi-qr-wrapper {
@@ -395,6 +401,11 @@ section ul li>p::before{
     filter: drop-shadow(0 0 .75rem #f538b9);
     }
 }
+/* theme ul style */
+.theme-list li {
+    font-size: 1.1rem;
+}
+
 
 /* back-home-icon style */
 .back-home-icon {
