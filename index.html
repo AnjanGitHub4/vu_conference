@@ -40,8 +40,8 @@
                 <!-- <script defer src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
                     type="module"></script> -->
                 <div class="loader-welcome">
-                    <lottie-player src="./js/anim_wlc.json"
-                        background="transparent" speed="1" loop autoplay></lottie-player>
+                    <lottie-player src="./js/anim_wlc.json" background="transparent" speed="1" loop
+                        autoplay></lottie-player>
                 </div>
                 <div class="loader-progress">
                     <lottie-player src="https://lottie.host/20c5b30b-13c3-487f-99d3-aa03b33f0cfc/tKe4uONJcd.json"
@@ -52,18 +52,25 @@
 
         <!-- header-top -->
         <div class="header-top">
-            <div class="container d-flex justify-content-center align-items-center">
-                <a><img src="./images/vu_logo-removebg.png" alt="conference logo" class="align-self-end img-fluid"
-                        width="160"></a>
+            <div class="container d-flex justify-content-around align-items-center">
                 <div class="header-top_title">
                     <h1>TIFS - 2024</h1>
-                    <h3>
+                    <p>
                         <span class="first-text">international conference</span>
                         <br>
                         <span class="center-text">on</span>
                         <br>
                         <span class="last-text">trends in financial sector in india and abroad</span>
-                    </h3>
+                    </p>
+                </div>
+                <div class="w-25 d-flex justify-content-center align-items-center">
+                    <a><img src="./images/vu_logo-removebg.png" alt="conference logo" class="align-self-end img-fluid"
+                        width="160"></a>
+                </div>
+                <div class="header-top-dept align-self-center">
+                    <h3>Department of Commerce, Vidyasagar University<br> Midnapore, West
+                        Bengal, India</h3>
+                    <h3>January 10 and 11, 2024</h3>
                 </div>
             </div>
         </div>
@@ -79,14 +86,33 @@
                         <div class="collapse navbar-collapse justify-content-center align-content-center"
                             id="navbarNavDropdown">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a href="#home" class="nav-link"><i class="fa-solid fa-house fa-fade" style="margin-right: .25rem; color: #ccc;"></i>Home</a></li>
-                                <li class="nav-item"><a href="#about" class="nav-link"><i class="fa-solid fa-users fa-fade" style="margin-right: .25rem; color: #ccc;"></i>About</a></li>
-                                <li class="nav-item"><a href="#theme" class="nav-link"><i class="fa-regular fa-rectangle-list fa-fade" style="margin-right: .25rem; color: #ccc;"></i>Theme</a></li>
-                                <li class="nav-item"><a href="#best-paper" class="nav-link"><i class="fa-solid fa-certificate fa-fade" style="margin-right: .25rem; color: #ccc;"></i>Best-Paper-Award</a></li>
-                                <li class="nav-item"><a href="#schedule" class="nav-link"><i class="fa-solid fa-newspaper fa-fade" style="margin-right: .25rem; color: #ccc;"></i>Paper-Submission</a></li>
-                                <li class="nav-item"><a href="#payment" class="nav-link"><i class="fa-regular fa-credit-card fa-fade" style="margin-right: .25rem; color: #ccc;"></i>Payment</a></li>
-                                <li class="nav-item"><a href="#register" class="nav-link"><i class="fa-brands fa-wpforms fa-fade" style="margin-right: .25rem; color: #ccc;"></i>Registration</a></li>
-                                <li class="nav-item"><a href="#contact" class="nav-link"><i class="fa-solid fa-phone fa-fade" style="margin-right: .25rem; color: #ccc;"></i>Contact</a></li>
+                                <li class="nav-item"><a href="#home" class="nav-link"><i
+                                            class="fa-solid fa-house fa-fade"
+                                            style="margin-right: .25rem; color: #ccc;"></i>Home</a></li>
+                                <li class="nav-item"><a href="#about" class="nav-link"><i
+                                            class="fa-solid fa-users fa-fade"
+                                            style="margin-right: .25rem; color: #ccc;"></i>About</a></li>
+                                <li class="nav-item"><a href="#theme" class="nav-link"><i
+                                            class="fa-regular fa-rectangle-list fa-fade"
+                                            style="margin-right: .25rem; color: #ccc;"></i>Theme</a></li>
+                                <li class="nav-item"><a href="#best-paper" class="nav-link"><i
+                                            class="fa-solid fa-certificate fa-fade"
+                                            style="margin-right: .25rem; color: #ccc;"></i>Best Paper Award</a></li>
+                                <li class="nav-item"><a href="#deadline" class="nav-link"><i
+                                            class="fa-solid fa-circle-exclamation fa-fade"
+                                            style="margin-right: .25rem; color: #ccc;"></i>Deadlines</a></li>
+                                <li class="nav-item"><a href="#schedule" class="nav-link"><i
+                                            class="fa-solid fa-newspaper fa-fade"
+                                            style="margin-right: .25rem; color: #ccc;"></i>Paper Submission</a></li>
+                                <li class="nav-item"><a href="#payment" class="nav-link"><i
+                                            class="fa-regular fa-credit-card fa-fade"
+                                            style="margin-right: .25rem; color: #ccc;"></i>Payment</a></li>
+                                <li class="nav-item"><a href="#register" class="nav-link"><i
+                                            class="fa-brands fa-wpforms fa-fade"
+                                            style="margin-right: .25rem; color: #ccc;"></i>Registration</a></li>
+                                <li class="nav-item"><a href="#contact" class="nav-link"><i
+                                            class="fa-solid fa-phone fa-fade"
+                                            style="margin-right: .25rem; color: #ccc;"></i>Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -103,16 +129,15 @@
         <section id="home" class="section-home">
             <div class="container">
                 <div class="organiser-details">
-                    <h2>January 10 and 11, 2024</h2>
+                    <h2>Venue</h2>
                     <div class="row mt-3">
-                        <div class="col-sm-6 col-md-8 col-lg-8">
+                        <!-- <div class="col-sm-6 col-md-8 col-lg-8">
                             <h5>Organized by</h5>
                             <p class="para-text">Department of Commerce, Vidyasagar University, <br> Midnapore, West
                                 Bengal, India</p>
-                        </div>
+                        </div> -->
                         <div class="col-sm-6 col-md-4 col-lg-4">
-                            <h5>Venue</h5>
-                            <p class="para-text">Vidyasagar University Campus, <br> Midnapore, West Bengal</p>
+                            <p class="para-text text-light">Vidyasagar University Campus, <br> Midnapore, West Bengal</p>
                         </div>
                     </div>
                 </div>
@@ -123,7 +148,7 @@
                 </path>
             </svg>
         </section>
-        
+
         <!-- section about -->
         <section id="about">
             <div class="container">
@@ -181,9 +206,9 @@
             <div class="container">
                 <h2 class="section-heading">Theme</h2>
                 <div class="theme-contents mt-2">
-                    <h3 class="mt-2">Who can attened the event?</h3>
+                    <h3 class="mt-2">Who can attend the event?</h3>
                     <p class="para-text mt-2">
-                        The event is open to academicians, research scholar, students, professionals, corporate
+                        The event is open to academicians, research scholars, students, professionals, corporate
                         representatives from banks, insurance companies etc.
                     </p>
                     <div class="row">
@@ -201,7 +226,7 @@
                         </div>
                         <div class="col-md-6 col-6 col-sm-6 col-lg-6">
                             <ul class="theme-list">
-                                <li>Insurence</li>
+                                <li>Insurance</li>
                                 <li>NBFCs</li>
                                 <li>Fintechs</li>
                                 <li>IPOs</li>
@@ -211,7 +236,7 @@
                             </ul>
                         </div>
                     </div>
-                    <p class="para-text align-self-start bg-dark p-1">
+                    <p class="para-text align-self-start p-1">
                         Any paper which does not fall under the above-mentioned themes but is related to the theme of
                         the conference is welcome to the organizers.
                     </p>
@@ -228,16 +253,55 @@
         <section id="best-paper">
             <div class="container">
                 <h2 class="section-heading">Best Paper Award</h2>
-               <div class="d-flex justify-content-center align-item-center mt-3">
-                <p class="para-text">There will be BEST PAPER AWARD in each of the technical sessions that includes a <br />
-                certificate, memento and cash prize.</p>
-               </div>
+                <div class="d-flex flex-column justify-content-center align-item-center mt-3">
+                    <div class="row best-paper-contents">
+                        <div class="col-md-6 col-lg-6 align-self-center paper-contents">
+                            <p class="para-text">There will be BEST PAPER AWARD in each of the technical sessions that includes
+                                a <br />
+                                certificate, memento and cash prize.</p>
+                            <p class="para-text">The organisers maintain a very transparent policy for deciding the BEST PAPER AWARD for the different technical sessions. For the purpose of taking the decision, 70% weightage is given to the content of the manuscript which is studied by the Chairperson based on blind review and 30% is given towards presentation. The BEST PAPER AWARD is finally decided by the Chairperson of the respective sessions. The members of the Organising Committee are not considered while adjudging the Best Paper.</p>
+                        </div>
+                        <div class="col-md-6 col-lg-6 paper-award-logo">
+                            <img src="./images/award.svg" alt="best paper award logo"
+                            width="100%"  height="350px" />
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                    <path fill="#eee" fill-opacity="1"
-                        d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
-                    </path>
+                <path fill="#eee" fill-opacity="1"
+                    d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+                </path>
+            </svg>
+        </section>
+
+        <!-- section deadlines -->
+        <section id="deadline">
+            <div class="container">
+                <h2 class="section-heading">Deadlines</h2>
+                <div class="row mt-2">
+                    <div class="col-md-6 col-lg-6 align-self-center">
+                        <ul class="list-item">
+                            <li>Submission of abstract: November 30, 2023</li>
+                            <li>Intimation of acceptance of abstract: December 7, 2023</li>
+                            <li>Submission of full paper: December 20, 2023</li>
+                            <li>Registration: Early bird: December 25, 2023</li>
+                            <li>Registration: Late bird: December 31, 2023</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <!-- <lottie-player src="./js/anim_deadline.json" background="transparent" speed="1" loop
+                        autoplay style="width: 90%; height: 400px; object-fit: cover;"></lottie-player> -->
+                        <img src="./images/deadline_img.svg" alt="deadline pic" width="100%" height=350px" class="deadline-logo"/>
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#eee" fill-opacity="1"
+                    d="M0,224L40,213.3C80,203,160,181,240,192C320,203,400,245,480,234.7C560,224,640,160,720,149.3C800,139,880,181,960,192C1040,203,1120,181,1200,170.7C1280,160,1360,160,1400,160L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+                </path>
             </svg>
         </section>
 
@@ -252,29 +316,16 @@
                         <span class="highlight-text"><em>vutifs2024@gmail.com</em></span> with a
                         copy to <span class="highlight-text"><em>asvutifs2024@gmail.com</em></span>. The submitted paper
                         should
-                        be formatted according to the "Guidelines for author" as required for Vidyasagar
+                        be formatted according to the "Guidelines for authors" as required for Vidyasagar
                         University Journal of Commerce (visit <a
                             href="http://vidyasagar.ac.in/files/dspace/joc/instruction.pdf" target="_blank"
-                            class="highlight-text uni-link"><em>http://vidyasagar.ac.in/files/dspace/joc/instruction.pdf</em></a>
+                            class="highlight-text uni-link"><em class="text-primary">http://vidyasagar.ac.in/files/dspace/joc/instruction.pdf</em></a>
                         for
                         details).
                         <br>
                         <strong>Note: Not more than two papers can be submitted by any author (either
                             singly or jointly).</strong>
                     </p>
-                    <div class="row mt-2">
-                        <div class="col-md-6 col-lg-6">
-                            <h3>Important deadlines:</h3>
-                            <ul class="list-item">
-                                <li>Submission of abstract: November 30,2023</li>
-                                <li>Intimation of acceptance of abstract: December 7, 2023</li>
-                                <li>Submission of full paper: December 20, 2023</li>
-                                <li>Registration: Early bird: December 25, 2023</li>
-                                <li>Registration: Late bird: December 31, 2023</li>
-                            </ul>
-                        </div>
-
-                    </div>
                 </div>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -308,7 +359,7 @@
                         data-bs-toggle="modal" data-bs-target="#paymentModal">
                         <div class="upi-qr-wrapper">
                             <div class="payment-info">
-                                <p>Click here to payment</p>
+                                <p>Click here to pay</p>
                                 <i class="fa-solid fa-arrow-down fa-2x zoom"></i>
                             </div>
                             <img src="./images/QR_Code.jpg" alt="payment-upi-qr-code">
@@ -368,7 +419,12 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="accommodation">
+                    <h3>Accommodation</h3>
+                    <p class="para-text mt-2">
+                        The delegates can arrange their accommodation in nearby hotels. However, the organisers can arrange accommodation only to a limited number of delegates on payment basis. Delegates who need accommodation should pay an amount of Rs. 750 per head per day along with the registration fee.
+                    </p>
+                </div>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#eee" fill-opacity="1"
@@ -389,16 +445,16 @@
                                     <p class="para-text">Dr. Abhijit Sinha, Associate Professor and Head, Department of
                                         Commerce, Vidyasagar
                                         University,<br> West Bengal and Jt. Org. Secretary, TIFS-2024 <br>
-                                        M: +91-94333 07607, <br>E-mail: asvutifs2024@gmail.com
+                                        <i class="fa-solid fa-phone"></i> +91-94333 07607, <br><i class="fa-regular fa-envelope"></i> asvutifs2024@gmail.com
                                     </p>
                                 </li>
                                 <li>
                                     <p class="para-text">Prof. Arindam Gupta, Professor, Department of Commerce,
                                         Vidyasagar University, <br> West Bengal
                                         and
-                                        Jt. Org. Secretary, TIFS-2024 <br>M: +91-62910 19196
+                                        Jt. Org. Secretary, TIFS-2024 <br><i class="fa-solid fa-phone"></i> +91-62910 19196
                                         <br>
-                                        E-mail: arindam_finance@mail.vidyasagar.ac.in
+                                        <i class="fa-regular fa-envelope"></i> arindam_finance@mail.vidyasagar.ac.in
                                     </p>
                                 </li>
                             </ul>
@@ -433,16 +489,33 @@
                     and abroad</h6>
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-lg-6 text-white">
-                    
+
                         <ul class="m-0">
-                            <li class="nav-item"><a href="#home" class="nav-link"><i class="fa-solid fa-house fa-fade" style="margin-right: .5rem; color: #ccc;"></i>Home</a></li>
-                            <li class="nav-item"><a href="#about" class="nav-link"><i class="fa-solid fa-users fa-fade" style="margin-right: .5rem; color: #ccc;"></i>About</a></li>
-                            <li class="nav-item"><a href="#theme" class="nav-link"><i class="fa-regular fa-rectangle-list fa-fade" style="margin-right: .5rem; color: #ccc;"></i>Theme</a></li>
-                            <li class="nav-item"><a href="#best-paper" class="nav-link"><i class="fa-solid fa-certificate fa-fade" style="margin-right: .25rem; color: #ccc;"></i>Best-Paper-Award</a></li>
-                            <li class="nav-item"><a href="#schedule" class="nav-link"><i class="fa-solid fa-newspaper fa-fade" style="margin-right: .5rem; color: #ccc;"></i>Paper-Submission</a></li>
-                            <li class="nav-item"><a href="#payment" class="nav-link"><i class="fa-regular fa-credit-card fa-fade" style="margin-right: .5rem; color: #ccc;"></i>Payment</a></li>
-                            <li class="nav-item"><a href="#register" class="nav-link"><i class="fa-brands fa-wpforms fa-fade" style="margin-right: .5rem; color: #ccc;"></i>Registration</a></li>
-                            <li class="nav-item"><a href="#contact" class="nav-link"><i class="fa-solid fa-phone fa-fade" style="margin-right: .5rem; color: #ccc;"></i>Contact</a></li>
+                            <li class="nav-item"><a href="#home" class="nav-link"><i class="fa-solid fa-house fa-fade"
+                                        style="margin-right: .5rem; color: #ccc;"></i>Home</a></li>
+                            <li class="nav-item"><a href="#about" class="nav-link"><i class="fa-solid fa-users fa-fade"
+                                        style="margin-right: .5rem; color: #ccc;"></i>About</a></li>
+                            <li class="nav-item"><a href="#theme" class="nav-link"><i
+                                        class="fa-regular fa-rectangle-list fa-fade"
+                                        style="margin-right: .5rem; color: #ccc;"></i>Theme</a></li>
+                            <li class="nav-item"><a href="#best-paper" class="nav-link"><i
+                                        class="fa-solid fa-certificate fa-fade"
+                                        style="margin-right: .25rem; color: #ccc;"></i>Best-Paper-Award</a></li>
+                            <li class="nav-item"><a href="#deadline" class="nav-link"><i
+                                            class="fa-solid fa-circle-exclamation fa-fade"
+                                            style="margin-right: .25rem; color: #ccc;"></i>Deadlines</a></li>
+                            <li class="nav-item"><a href="#schedule" class="nav-link"><i
+                                        class="fa-solid fa-newspaper fa-fade"
+                                        style="margin-right: .5rem; color: #ccc;"></i>Paper-Submission</a></li>
+                            <li class="nav-item"><a href="#payment" class="nav-link"><i
+                                        class="fa-regular fa-credit-card fa-fade"
+                                        style="margin-right: .5rem; color: #ccc;"></i>Payment</a></li>
+                            <li class="nav-item"><a href="#register" class="nav-link"><i
+                                        class="fa-brands fa-wpforms fa-fade"
+                                        style="margin-right: .5rem; color: #ccc;"></i>Registration</a></li>
+                            <li class="nav-item"><a href="#contact" class="nav-link"><i
+                                        class="fa-solid fa-phone fa-fade"
+                                        style="margin-right: .5rem; color: #ccc;"></i>Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 col-sm-12 col-lg-6 text-white pl-0 footer-map mt-2">
@@ -453,9 +526,9 @@
                                 width="450" height="282" frameborder="0" style="border:0" allowfullscreen=""></iframe>
                         </div>
                     </div>
-                    
+
                 </div>
-                <h6 class="text-center footer-thanks">Thank You</h6>
+                <!-- <h6 class="text-center footer-thanks">Thank You</h6> -->
             </div>
         </div>
     </footer> <!-- end footer content -->
@@ -477,5 +550,3 @@
 </body>
 
 </html>
-
-

@@ -33,7 +33,7 @@
     --white-color: #ffffff;
     --bx-shadow: 0 0 2px rgba(0,0,0,0.5);
     --gradient-color-primary: linear-gradient(-45deg, #fbc2eb 0%, #a6c1ee 100%);
-    --gradient-color-secondary: linear-gradient(-225deg, #1638c1 50%, #a463b4 100%);
+    --gradient-color-secondary: linear-gradient(-225deg, #1c3ab0 50%, #a463b4 100%);
 }
 body {
     scroll-behavior: smooth;
@@ -172,30 +172,40 @@ header {
 }
 
 .header-top a >  img {
-    max-height: 175px;
-    min-height: 110px;
+    width: 130px;
     object-fit: cover;
 }
 .header-top_title {
     margin-top: .5rem;  
 }
 .header-top_title h1 {
-    text-align: center;
+    text-align: left;
     font-size: 1.5rem;
-    -webkit-text-stroke: 1px #f40752;
+    /* -webkit-text-stroke: 1.5px #210b32; */
     color: transparent;
     font-weight: 700;
     margin: .25rem 0 0 0;
-    color: #f74c06;
+    color: #210b32;
 }
-.header-top .header-top_title h3 {
-    text-align: center;
+.header-top .header-top_title p {
+    text-align: start;
+    margin-bottom: .5rem;
 }
 
-.header-top .header-top_title h3 > span {
+.header-top .header-top_title p > span {
     text-transform: uppercase;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 700;
+    color: transparent;
+    background: -moz-linear-gradient(90deg, hsla(354, 95%, 24%, 1) 0%, hsla(234, 70%, 24%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(354, 95%, 24%, 1) 0%, hsla(234, 70%, 24%, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+.header-top-dept h3{
+    font-size: 1.25rem;
+    font-weight: 600;
     color: transparent;
     background: -moz-linear-gradient(90deg, hsla(354, 95%, 24%, 1) 0%, hsla(234, 70%, 24%, 1) 100%);
     background: -webkit-linear-gradient(90deg, hsla(354, 95%, 24%, 1) 0%, hsla(234, 70%, 24%, 1) 100%);
@@ -243,7 +253,7 @@ main section {
     margin-bottom: .25em;
     background: hsla(350, 73%, 44%, 1);
     background: linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsla(274, 65%, 12%, 1) 100%);
-    background: -moz-linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsla(274, 65%, 12%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsl(274, 64%, 12%) 100%);
     background: -webkit-linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsla(274, 65%, 12%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C11E38", endColorstr="#220B34", GradientType=1 );
     /* background: rgb(2,0,36);
@@ -263,6 +273,7 @@ main section {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 section .section-heading {
     padding: .5rem 0;
@@ -292,9 +303,14 @@ section ul li {
     margin-top: .5rem;
 }
 section ul li>p::before{
-    content: ">> ";
+    font-family: "Font Awesome 6 Free";
+    /* content: "\f56b "; */
+    content: "\f56b ";
+    content: "\f0a4";
     color: var(--list-icon-color);
     font-weight: 600;
+    margin-right: .25rem;
+    -webkit-font-smoothing: antialiased;
 }
 
 .section-text > .highlight-text {
@@ -316,7 +332,7 @@ section ul li>p::before{
     margin-top: .25rem;
 }
 .organiser-details {
-    position: relative;
+   position: relative;
    color: var(--secondary-color);
    padding: .5rem;
    z-index: 999;
@@ -327,11 +343,19 @@ section ul li>p::before{
     top: 0%;
     left: 0%;
     width: 100%;
-    min-height: 25vh;
+    min-height: 20vh;
     background-color: rgba(6, 1, 11, 0.5);
     backdrop-filter: blur(2px);
     z-index: -1;
+    overflow: hidden;
 }
+
+/* deadline style */
+.deadline-logo {
+    animation: bg-glow .4s ease-in-out infinite;
+}
+
+
 /* payment-contents styles */
 .payment-contents > li {
     font-size: 1.1rem;
@@ -482,15 +506,23 @@ footer {
     .header-top {
         padding: .5rem 0;
     }
+    .header-top .container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
     .header-top_title h1 {
         margin-bottom: 0;
         font-size: 1.5rem;
+        text-align: center;
     }
-    .header-top_title h3 {
-        font-size: 1rem;
+    .header-top_title > p {
+        text-align: center !important;
+        font-size: 1.2rem;
     }
-    .header-top_title h3>span {
-        font-size: 1rem;
+    .header-top-dept {
+        padding: .5rem 0;
+        text-align: center;
     }
     
 }
@@ -498,6 +530,12 @@ footer {
 @media (max-width: 468px){
     html {
         font-size: 80%;
+    }
+    .header-top .container{
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .loader-welcome {
         width: 80%;
@@ -517,15 +555,21 @@ footer {
     }
     .header-top .header-top_title h1 {
         font-size: 1.4rem;
-        text-align: left;
+        text-align: center;
         margin-bottom: 0;
     }
-   .header-top .header-top_title >  h3  {
-        text-align: left;
+   .header-top .header-top_title >  p  {
+        text-align: center;
+        margin-top: .5rem;
     }
-   .header-top .header-top_title h3 > span {
-    font-size: 1rem;
+   .header-top .header-top_title p > span {
+        font-size: 1rem;
         font-weight: 600;
+    }
+    .header-top-dept h3{
+        font-size: 1.2rem;
+        text-align: center;
+        padding: .5rem 0;
     }
     nav {
         align-items: start;
@@ -566,10 +610,21 @@ footer {
     section ul li {
         color: var(--text-light-white);
     }
+    .section-home {
+        background-size: 100% 500px;
+    }
     .organiser-details::before {
         content: "";
         background-color: none;
-        min-height: 30vh;
+        min-height: 14vh;
+    }
+    /* best paper */
+    .best-paper-contents .paper-contents{
+        margin-top: .5rem;
+        order: 2;
+    }
+    .best-paper-contents .paper-award-logo {
+        order: 1;
     }
     .upi-qr-wrapper > img {
         width: 100%;
@@ -611,10 +666,10 @@ footer {
         margin: .5rem 0;
     }
 
-    .header-top .header-top_title h3 {
+    .header-top .header-top_title p {
         text-align: center;
     }
-    .header-top .header-top_title h3 > span{
+    .header-top .header-top_title p > span{
         color: var(--slate-dark);
         text-align: left;
         font-weight: 600;
@@ -622,8 +677,17 @@ footer {
         line-height: 1.5;
         word-wrap: break-word;
     }
+    .header-top-dept h3{
+        color: var(--slate-dark);
+    }
     main section {
         border-radius: 0;
+    }
+    .section-home {
+        background-size: 100% 550px;
+    }
+    .organiser-details::before {
+        min-height: 14vh;
     }
 
 } /* ********************* media query ends ************************** */
