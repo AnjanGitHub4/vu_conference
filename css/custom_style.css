@@ -179,16 +179,16 @@ header {
     margin-top: .5rem;  
 }
 .header-top_title h1 {
-    text-align: left;
+    text-align: center;
     font-size: 1.5rem;
     /* -webkit-text-stroke: 1.5px #210b32; */
     color: transparent;
     font-weight: 700;
     margin: .25rem 0 0 0;
-    color: #210b32;
+    color: #4f1c76;
 }
 .header-top .header-top_title p {
-    text-align: start;
+    text-align: center;
     margin-bottom: .5rem;
 }
 
@@ -246,21 +246,12 @@ nav li a:hover {
 
 /* ********************* main section style starts ************************** */
 main section {
-    /* background-color: var(--bg-section);     */
-    /* background: url('../images/dark-bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
     margin-bottom: .25em;
     background: hsla(350, 73%, 44%, 1);
     background: linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsla(274, 65%, 12%, 1) 100%);
     background: -moz-linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsl(274, 64%, 12%) 100%);
     background: -webkit-linear-gradient(90deg, hsla(350, 73%, 44%, 1) 0%, hsla(274, 65%, 12%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C11E38", endColorstr="#220B34", GradientType=1 );
-    /* background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,15,50,1) 35%, rgba(70,40,60,1) 100%);
-    background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,15,50,1) 35%, rgba(70,40,60,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,15,50,1) 35%, rgba(70,40,60,1) 100%); */
-    /* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C11E38", endColorstr="#220B34", GradientType=1 ); */
     height: auto;
     padding: 1rem 0 0 0;
     border: 0;
@@ -302,11 +293,11 @@ section ul li {
     border-bottom: 1px dotted var(--primary-color);
     margin-top: .5rem;
 }
+
 section ul li>p::before{
     font-family: "Font Awesome 6 Free";
-    /* content: "\f56b "; */
     content: "\f56b ";
-    content: "\f0a4";
+    /* content: "\f0a4"; */
     color: var(--list-icon-color);
     font-weight: 600;
     margin-right: .25rem;
@@ -319,7 +310,12 @@ section ul li>p::before{
     border-radius: 4px;
 }
 .uni-link {
-    color: var(--light-grey);
+    color: var(--heading-color);
+    transition: all .2s linear;
+}
+.uni-link:hover {
+    color: var(--primary-btn-color);
+    text-decoration: underline;
 }
 .section-text > strong {
     color: var(--info-color);
@@ -349,13 +345,14 @@ section ul li>p::before{
     z-index: -1;
     overflow: hidden;
 }
-
+/* best paper award logo */
+.paper-award-logo {
+    animation: bg-glow .4s ease-in-out infinite;
+}
 /* deadline style */
 .deadline-logo {
     animation: bg-glow .4s ease-in-out infinite;
 }
-
-
 /* payment-contents styles */
 .payment-contents > li {
     font-size: 1.1rem;
@@ -429,8 +426,6 @@ section ul li>p::before{
 .theme-list li {
     font-size: 1.1rem;
 }
-
-
 /* back-home-icon style */
 .back-home-icon {
     color: #fff;
@@ -538,10 +533,10 @@ footer {
         align-items: center;
     }
     .loader-welcome {
-        width: 80%;
+        width: 90%;
     }
     .loader-progress {
-        width: 25%;
+        width: 28%;
     }
     .header-top {
         padding: .25rem 0;
@@ -647,12 +642,19 @@ footer {
 }
 
 @media (max-width:320px){
+    .loader-welcome {
+        width: 90%;
+    }
+    .loader-progress {
+        width: 28%;
+    }
     .header-top .container{
         padding: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .header-top a > img {
      width: 110px;
     }

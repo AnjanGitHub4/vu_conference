@@ -29,12 +29,6 @@ upiWrapper.addEventListener("click", (eArgs) => {
 
 window.addEventListener('scroll', (e) => {
     let scrollY = Math.floor(window.scrollY);
-    // if (scrollY >= 240 && scrollY < 425) {
-    //     document.querySelector("header").classList.add("sticky-header");
-    // }
-    // if (scrollY === 0) {
-    //     document.querySelector("header").classList.remove("sticky-header");
-    // }
     // display go-back-button after scrolling some ections 
     if (scrollY >= 1550) {
         document.querySelector(".back-home-icon").style.display = "block";
