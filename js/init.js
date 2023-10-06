@@ -1,3 +1,10 @@
+/**
+ * @author "Anjan Maity"
+ * @contacts "anjanmaity1824@gmail.com"
+ * @description "all logics are implemented by me"
+ * @version "1.0.0"
+ */
+
 let upiWrapper = document.querySelector(".upi-qr-wrapper img");
 let modalBody = document.querySelector(".modal-body");
 let preLoader = document.querySelector(".preloader");
@@ -11,6 +18,7 @@ const loader = () => {
         document.body.style.overflow = "auto";
     }, 3000)
 }
+
 window.addEventListener('DOMContentLoaded', () => {
     loader();
 });
@@ -45,5 +53,3 @@ function goBackHome() {
         behavior: "smooth",
     });
 }
-
-

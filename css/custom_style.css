@@ -1,3 +1,9 @@
+/*
+    @developers "Anjan Maity,Subhasis Khanra,Sourav Pramanik"
+    @params "css3"
+*/
+
+
 *{
     margin: 0;
     padding: 0;
@@ -470,6 +476,7 @@ footer {
 .footer-links ul {
     padding-left: .25rem;
 }
+
 .footer-links ul > li {
     border-bottom: 1px dashed var(--primary-color);
 }
