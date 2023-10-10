@@ -498,7 +498,12 @@ footer {
  }
  
 /* ********************* media query start ************************** */
-@media screen and (max-width: 768px) and (min-width:468px) {
+@media screen and (min-width: 992px) and (max-width:1150px) {
+    nav li a{
+        font-size: .85rem;
+    }
+}
+@media screen and (min-width:468px) and (max-width: 768px) {
     .loader-welcome {
         width: 60%;
     }
@@ -513,12 +518,15 @@ footer {
         justify-content: center;
         align-items: center;
     }
+    .header-top .header-top_title {
+        margin-top: 0;
+    }
     .header-top_title h1 {
         margin-bottom: 0;
         font-size: 1.5rem;
         text-align: center;
     }
-    .header-top_title > p {
+   .header-top .header-top_title p>span {
         text-align: center !important;
         font-size: 1.2rem;
     }
@@ -526,7 +534,24 @@ footer {
         padding: .5rem 0;
         text-align: center;
     }
-    
+    .header-top-dept h3{
+        /* font-size: 1.2rem; */
+        font-weight: 600;
+    }
+    section p,
+    .theme-list li,
+    .list-item,
+    .payment-contents>li {
+        font-size: 1rem;
+    }
+    .section-home {
+        background-size: 100% 100%;
+    }
+    .reg-btn > p {
+        font-size: .85rem;
+        margin: .5rem 0;
+        text-align: center;
+    }
 }
 
 @media (max-width: 468px){
